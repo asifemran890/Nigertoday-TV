@@ -75,16 +75,16 @@ export default function CustomersPage() {
 
       <div className="card overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[860px]">
+          <table className="w-full min-w-0 lg:min-w-[860px]">
             <thead className="bg-slate-50">
               <tr>
                 <th className="th">Customer</th>
-                <th className="th">Phone</th>
-                <th className="th">Start date</th>
-                <th className="th">Duration</th>
-                <th className="th">Expires</th>
+                <th className="th hidden lg:table-cell">Phone</th>
+                <th className="th hidden lg:table-cell">Start date</th>
+                <th className="th hidden lg:table-cell">Duration</th>
+                <th className="th hidden lg:table-cell">Expires</th>
                 <th className="th">Status</th>
-                <th className="th">Actions</th>
+                <th className="th hidden lg:table-cell">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
@@ -111,12 +111,12 @@ export default function CustomersPage() {
                         </span>
                       </Link>
                     </td>
-                    <td className="td">{c.phone}</td>
-                    <td className="td">{fmtShort(c.startDate)}</td>
-                    <td className="td">{c.durationMonths} mo</td>
-                    <td className="td">{fmtShort(c.expiryDate)}</td>
+                    <td className="td hidden lg:table-cell">{c.phone}</td>
+                    <td className="td hidden lg:table-cell">{fmtShort(c.startDate)}</td>
+                    <td className="td hidden lg:table-cell">{c.durationMonths} mo</td>
+                    <td className="td hidden lg:table-cell">{fmtShort(c.expiryDate)}</td>
                     <td className="td"><StatusBadge status={c.status} /></td>
-                    <td className="td">
+                    <td className="td hidden lg:table-cell">
                       <div className="flex gap-2">
                         {expired ? <>{renewBtn}{msgBtn}</> : <>{msgBtn}{renewBtn}</>}
                       </div>

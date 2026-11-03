@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { AlertTriangle, Clock, LayoutGrid, LogOut, Menu, Settings, Users } from "lucide-react";
+import { AlertTriangle, Clock, LayoutGrid, LogOut, Menu, Sun, Users } from "lucide-react";
 import Logo from "./Logo";
 import { useStore } from "@/lib/store";
 import { getStatus } from "@/lib/dates";
@@ -30,7 +30,7 @@ function NavContent({ mobile = false }) {
     { href: "/customers", label: "Customers", icon: Users },
     { href: "/expiring", label: "Expiring", icon: Clock, badge: counts.expiring, badgeClass: "bg-amber-600" },
     { href: "/expired", label: "Expired", icon: AlertTriangle, badge: counts.expired, badgeClass: "bg-red-600" },
-    { href: "/settings", label: "Settings", icon: Settings },
+    { href: "/settings", label: "Settings", icon: Sun },
   ];
 
   const logoutButton = (
