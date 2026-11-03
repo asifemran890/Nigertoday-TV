@@ -23,7 +23,7 @@ export default function Modal({ open, onClose, icon, iconClass = "bg-brand-50 te
       className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4 backdrop-blur-[2px]"
       onMouseDown={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div role="dialog" aria-modal="true" className={`w-full ${width} rounded-2xl bg-white p-5 shadow-modal`}>
+      <div role="dialog" aria-modal="true" className={`max-h-[calc(100vh-2rem)] w-full overflow-y-auto ${width} rounded-2xl bg-white p-5 shadow-modal`}>
         <div className="mb-4 flex items-start gap-3">
           {icon && (
             <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${iconClass}`}>

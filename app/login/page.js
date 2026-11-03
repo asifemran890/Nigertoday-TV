@@ -67,7 +67,7 @@ export default function LoginPage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Logo light />
+        <Logo className="h-20 w-20" />
         <div>
           <h2 className="text-3xl font-bold tracking-tight">
             Know who to call today.

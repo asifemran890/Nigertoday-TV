@@ -20,7 +20,7 @@ export default function AppShell({ children }) {
   return (
     <div className="min-h-screen bg-page">
       <Sidebar />
-      <main className="lg:pl-60">
+      <main className="pb-20 lg:pb-0 lg:pl-60">
         <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8 sm:py-8">{children}</div>
       </main>
     </div>
